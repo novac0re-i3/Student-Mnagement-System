@@ -59,3 +59,13 @@ class admin(person):
             
 family_list=[]
 admin1=admin("Kamal Islam" , 30)
+
+while(True):
+    print("\n --Family Info and Income Management system--")
+    print("1.Add family")
+    print("2.Show all families")
+    print("3.Update family income")
+    print("4.Remove family")
+    print("5.Exit")
+
+    choice=input('Enter your choice :')
