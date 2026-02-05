@@ -57,3 +57,5 @@ class admin(person):
                 print("Income updated")
                 break
             
+family_list=[]
+admin1=admin("Kamal Islam" , 30)
