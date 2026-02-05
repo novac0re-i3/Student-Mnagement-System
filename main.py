@@ -36,3 +36,24 @@ class person(families):
         super().show_info()
         print(f"Admin info--- name:{self.name} , age: {self.age}")
         
+class admin(person):
+    def add_family(self,family_list,family): 
+        family_list.append(family) 
+        print(f"{family.family_name} family is added successfully")  
+
+    def remove_family(self,family_list,family_name):
+        for s in family_list:
+            if s.family_name==family_name:
+                family_list.remove(s)
+                
+                del s
+                print("Family removed")
+                break   
+
+    def update_income(self,family_list,family_name,new_income):
+        for s in family_list:
+            if s.family_name==family_name:
+                s.set_total_income(new_income)
+                print("Income updated")
+                break
+            
