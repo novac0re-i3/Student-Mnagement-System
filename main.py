@@ -69,3 +69,38 @@ while(True):
     print("5.Exit")
 
     choice=input('Enter your choice :')
+    if choice=="1":
+        name=input("Family name: ")
+        dad_name=input("Father's name: ")
+        mom_name=input("Mother's name: ")
+        members=int(input("Family members: "))
+        total_income=float(input("Total income: "))
+
+        fm=parents(name,dad_name,mom_name,members,total_income)
+
+        admin1.add_family(family_list,fm)
+
+    elif choice=="2":
+        for s in family_list:
+            s.show_info()
+            print("------")
+    
+    elif choice=="3":
+        family_name=input("Enter the family name: ")
+        new_income=float(input("Enter the new income: "))
+
+        admin1.update_income(family_list,family_name,new_income)
+
+    elif choice=="4":
+        family_name=input("Enter the family name: ")
+
+        admin1.remove_family(family_list,family_name)
+
+    elif choice=="5":
+        print("System Close")
+        break
+
+    else :
+        print("invalid choice")
+
+
